@@ -58,7 +58,7 @@ class FMFiltersMenuView: UIView {
         collectionView.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.old, context: nil)
         isObservingCollectionView = true
         
-        self.backgroundColor = .clear
+        self.backgroundColor = backgroundBars
         collectionView.backgroundColor = .clear
     }
     
@@ -66,7 +66,7 @@ class FMFiltersMenuView: UIView {
         parenetView.addSubview(self)
         
         translatesAutoresizingMaskIntoConstraints = false
-        heightAnchor.constraint(equalToConstant: 64).isActive = true
+        heightAnchor.constraint(equalToConstant: 84).isActive = true
         rightAnchor.constraint(equalTo: parenetView.rightAnchor).isActive = true
         leftAnchor.constraint(equalTo: parenetView.leftAnchor).isActive = true
         bottomAnchor.constraint(equalTo: parenetView.bottomAnchor).isActive = true

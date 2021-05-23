@@ -168,7 +168,7 @@ public class FMImageEditorViewController: UIViewController {
         super.viewDidLoad()
         
         if config.availableCrops == nil, config.availableFilters == nil {
-            fatalError("Plase set at least one crop option or one filter option in order to use the editor")
+            fatalError("Please set at least one crop option or one filter option in order to use the editor")
         }
         
         headerView.isHidden = true
@@ -501,7 +501,7 @@ private extension FMImageEditorViewController {
     func setupView() {
         let headerView = UIView()
         self.headerView = headerView
-        headerView.backgroundColor = .white
+        headerView.backgroundColor = backgroundBars
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(headerView)
@@ -534,7 +534,7 @@ private extension FMImageEditorViewController {
             menuContainer.leftAnchor.constraint(equalTo: headerView.leftAnchor),
             menuContainer.rightAnchor.constraint(equalTo: headerView.rightAnchor),
             menuContainer.bottomAnchor.constraint(equalTo: headerView.bottomAnchor),
-            menuContainer.heightAnchor.constraint(equalToConstant: 44)
+            menuContainer.heightAnchor.constraint(equalToConstant: 64)
         ])
         
         let cancelButton = UIButton(type: .custom)
@@ -564,7 +564,7 @@ private extension FMImageEditorViewController {
         
         let bottomViewContainer = UIView()
         self.bottomViewContainer = bottomViewContainer
-        bottomViewContainer.backgroundColor = .white
+        bottomViewContainer.backgroundColor = backgroundBars
         
         bottomViewContainer.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bottomViewContainer)

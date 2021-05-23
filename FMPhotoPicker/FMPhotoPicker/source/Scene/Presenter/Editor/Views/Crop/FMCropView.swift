@@ -86,7 +86,11 @@ class FMCropView: UIView {
         cropBoxView = FMCropCropBoxView(cropRatio: nil)
         
         foregroundView = FMCropForegroundView(image: image)
-        translucencyView = FMCropTranslucencyView(effect: UIBlurEffect(style: .light))
+        if #available(iOS 10.0, *) {
+            translucencyView = FMCropTranslucencyView(effect: UIBlurEffect(style: .regular))
+        } else {
+            translucencyView = FMCropTranslucencyView(effect: UIBlurEffect(style: .light))
+        }
         
         cornersView = FMCropCropBoxCornersView()
         

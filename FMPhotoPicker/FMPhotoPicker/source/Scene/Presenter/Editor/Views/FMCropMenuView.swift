@@ -101,7 +101,7 @@ class FMCropMenuView: UIView {
         parentView.addSubview(self)
         
         translatesAutoresizingMaskIntoConstraints = false
-        heightAnchor.constraint(equalToConstant: 64).isActive = true
+        heightAnchor.constraint(equalToConstant: 84).isActive = true
         leftAnchor.constraint(equalTo: parentView.leftAnchor).isActive = true
         rightAnchor.constraint(equalTo: parentView.rightAnchor).isActive = true
         bottomAnchor.constraint(equalTo: parentView.bottomAnchor).isActive = true

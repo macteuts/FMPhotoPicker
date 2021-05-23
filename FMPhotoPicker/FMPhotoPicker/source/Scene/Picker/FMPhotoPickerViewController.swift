@@ -74,7 +74,7 @@ public class FMPhotoPickerViewController: UIViewController {
     
     public override func loadView() {
         view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = backgroundBars
         initializeViews()
         setupView()
     }
@@ -359,7 +359,7 @@ extension FMPhotoPickerViewController: UIViewControllerTransitioningDelegate {
 private extension FMPhotoPickerViewController {
     func initializeViews() {
         let headerView = UIView()
-        headerView.backgroundColor = .white
+        headerView.backgroundColor = backgroundBars
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(headerView)
@@ -398,7 +398,7 @@ private extension FMPhotoPickerViewController {
             menuContainer.leftAnchor.constraint(equalTo: headerView.leftAnchor),
             menuContainer.rightAnchor.constraint(equalTo: headerView.rightAnchor),
             menuContainer.bottomAnchor.constraint(equalTo: headerView.bottomAnchor),
-            menuContainer.heightAnchor.constraint(equalToConstant: 44)
+            menuContainer.heightAnchor.constraint(equalToConstant: 64)
         ])
         
         let cancelButton = UIButton(type: .system)
